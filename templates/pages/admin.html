@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - CampaignHub{% endblock %}
+
+{% block content %}
+<main id="admin-page">
+  <header class="admin-header">
+    <h1>Admin Dashboard</h1>
+    <p>
+      Manage services, update website content, and control consultation
+      availability from this panel.
+    </p>
+  </header>
+
+  <section class="service-management">
+    <h2>Service Management</h2>
+    <p>
+      Add, update, or disable services displayed on the website.
+      Changes here affect the Services page immediately.
+    </p>
+
+    <div class="admin-actions">
+      <button class="add-service">Add New Service</button>
+      <button class="disable-service">Enable / Disable Services</button>
+    </div>
+  </section>
+
+  <section class="content-management">
+    <h2>Content Management</h2>
+    <p>
+      Update editable website content such as homepage text,
+      service descriptions, or informational sections.
+    </p>
+
+    <label for="content-editor">Editable Content</label>
+    <textarea
+      id="content-editor"
+      class="editable"
+      placeholder="Edit website content here..."
+    ></textarea>
+
+    <button class="save-content">Save Changes</button>
+  </section>
+
+  <section class="availability-management">
+    <h2>Consultation Availability</h2>
+    <p>
+      Control whether users can submit consultation requests.
+      This is useful during maintenance or high-demand periods.
+    </p>
+
+    <div class="admin-actions">
+      <button class="pause-booking">Pause Consultation Requests</button>
+      <button class="resume-booking">Resume Consultation Requests</button>
+    </div>
+  </section>
+</main>
+{% endblock %}

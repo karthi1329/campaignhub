@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - CampaignHub{% endblock %}
+
+{% block content %}
+<main id="contact-page">
+  <h1>Contact Us</h1>
+
+  <section class="contact-info">
+    <p>
+      Have a question about our services or want to discuss your requirements?
+      Reach out to us using the form below or contact us directly.
+    </p>
+
+    <ul class="contact-details">
+      <li>
+        <strong>Email:</strong>
+        <a href="mailto:contact@campaignhub.com">contact@campaignhub.com</a>
+      </li>
+      <li>
+        <strong>Phone:</strong>
+        <a href="tel:+919000000000">+91 90000 00000</a>
+      </li>
+      <li>
+        <strong>Location:</strong> Chennai, India
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+
+    <form id="contactForm" class="form" method="POST" action="{{ url_for('contact') }}">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" class="input" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="input" placeholder="Your email address" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" class="textarea" placeholder="Tell us briefly how we can help you" required></textarea>
+
+      {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

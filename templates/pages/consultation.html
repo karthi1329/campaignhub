@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Consultation - CampaignHub{% endblock %}
+
+{% block content %}
+<main id="consultation-page">
+  <h1>Request Consultation</h1>
+
+  <p>
+    Use the form below to request a consultation with our team.
+    This is an initial discussion to understand your requirements and
+    suggest suitable options. There is no obligation to proceed.
+  </p>
+
+  {# Flash message block for success/error notifications #}
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="flash-message">
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <form id="consultationForm" class="form" method="POST" action="{{ url_for('consultation') }}">
+    
+    <label for="service">Select Service</label>
+    <select id="service" name="service" class="input" required aria-describedby="service-note">
+      <option value="">-- Select a service --</option>
+
+      <option value="digital"
+        {% if request.form.get('service') == 'digital' or request.args.get('service') == 'digital' %}selected{% endif %}>
+        Digital Advertising
+      </option>
+
+      <option value="television"
+        {% if request.form.get('service') == 'television' or request.args.get('service') == 'television' %}selected{% endif %}>
+        Television Advertising
+      </option>
+
+      <option value="offline"
+        {% if request.form.get('service') == 'offline' or request.args.get('service') == 'offline' %}selected{% endif %}>
+        Offline Advertising
+      </option>
+
+      <option value="advertising"
+        {% if request.form.get('service') == 'advertising' or request.args.get('service') == 'advertising' %}selected{% endif %}>
+        Advertising & Promotion
+      </option>
+
+      <option value="consultation"
+        {% if request.form.get('service') == 'consultation' or request.args.get('service') == 'consultation' %}selected{% endif %}>
+        Business Consultation
+      </option>
+
+      <option value="growth"
+        {% if request.form.get('service') == 'growth' or request.args.get('service') == 'growth' %}selected{% endif %}>
+        Business Ideas & Growth Support
+      </option>
+    </select>
+
+    <p id="service-note" class="form-note">
+      Selecting “Advertising & Promotion” covers digital, television,
+      and offline advertising under a single consultation.
+    </p>
+
+    <label for="details">Details</label>
+    <textarea
+      id="details"
+      name="details"
+      class="textarea"
+      placeholder="Briefly describe your requirement, business, or idea"
+      required
+    ></textarea>
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+    <button type="submit" class="submit-btn">Submit Request</button>
+  </form>
+</main>
+{% endblock %}

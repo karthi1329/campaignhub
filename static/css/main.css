@@ -1,0 +1,473 @@
+/* ====== Global Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ====== Header & Navigation ====== */
+.site-header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.company-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Home Page ====== */
+#home-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Overview Section */
+.overview {
+  background: #eef6fb;
+  border-left: 4px solid #0078d7;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+.overview p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Service Summary Section */
+.service-summary {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.service-summary h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.service-summary p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.service-summary ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.service-summary li {
+  padding: 1rem;
+  border-left: 4px solid #0078d7;
+  background: #fdfdfd;
+  border-radius: 4px;
+}
+
+.service-summary h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0078d7;
+}
+
+.service-summary p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.service-summary a {
+  color: #0078d7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-summary a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ====== Services Page ====== */
+#services-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#services-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Category Sections */
+.category {
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.category h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #0078d7;
+}
+
+.category p {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Sub-services */
+.sub-service {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-left: 4px solid #0078d7;
+  background: #fdfdfd;
+  border-radius: 4px;
+}
+
+.sub-service h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0078d7;
+}
+
+.sub-service p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Consultation Buttons */
+.consult-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.consult-btn:hover {
+  background: #005fa3;
+}
+
+/* Flash message styling */
+.flash-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Form note styling */
+.form-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+
+/* ====== About Page ====== */
+#about-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Company Info Section */
+.company-info {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.company-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #0078d7;
+}
+
+.company-info p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Vision Section */
+.vision {
+  background: #eef6fb;
+  padding: 1.5rem;
+  border-left: 4px solid #0078d7;
+  border-radius: 6px;
+}
+
+.vision h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #0078d7;
+}
+
+.vision p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ====== Contact Page ====== */
+#contact-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Contact Info Section */
+.contact-info {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.contact-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-details li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-details a {
+  color: #0078d7;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Section */
+.contact-form {
+  background: #eef6fb;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #0078d7;
+}
+
+.contact-form h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #0078d7;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #005fa3;
+}
+
+.flash-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+
+/* ====== Consultation Page ====== */
+#consultation-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#consultation-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #222;
+}
+
+#consultation-page p {
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Consultation Form */
+#consultationForm {
+  background: #eef6fb;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #0078d7;
+}
+
+#consultationForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#consultationForm .input,
+#consultationForm .textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#consultationForm .textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#consultationForm .submit-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#consultationForm .submit-btn:hover {
+  background: #005fa3;
+}
+
+

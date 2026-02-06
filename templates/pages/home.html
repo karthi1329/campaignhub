@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Home - CampaignHub{% endblock %}
+
+{% block content %}
+
+<section class="overview">
+  <p>
+    At CampaignHub, we work closely with businesses, startups, and individuals
+    to understand their goals before recommending the right advertising or
+    strategic approach. Our focus is on clear planning, practical guidance,
+    and long-term growth.
+  </p>
+</section>
+
+<section class="intro">
+  <h2>Welcome to CampaignHub</h2>
+  <p>
+    We help businesses and individuals promote, grow, and improve through
+    advertising, promotion, and strategic guidance.
+  </p>
+</section>
+
+<section class="service-summary" aria-labelledby="services-heading">
+  <h2 id="services-heading">Our Core Services</h2>
+  <p>Here’s what we offer:</p>
+  <ul>
+    <li>
+      <h3>Advertising & Promotion</h3>
+      <p>
+        Helping brands reach the right audience through digital, television,
+        and offline advertising strategies.
+        <a href="{{ url_for('services') }}">Learn more</a>
+      </p>
+    </li>
+
+    <li>
+      <h3>Business Consultation & Analysis</h3>
+      <p>
+        Providing strategic guidance and analysis to improve business
+        performance and market positioning.
+        <a href="{{ url_for('services') }}">Learn more</a>
+      </p>
+    </li>
+
+    <li>
+      <h3>Business Ideas & Growth Support</h3>
+      <p>
+        Supporting startups and individuals with idea validation, improvement,
+        and growth planning.
+        <a href="{{ url_for('services') }}">Learn more</a>
+      </p>
+    </li>
+  </ul>
+</section>
+{% endblock %}

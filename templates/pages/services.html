@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Services - CampaignHub{% endblock %}
+
+{% block content %}
+<main id="services-page">
+  <h1>Our Services</h1>
+
+  <section class="category advertising">
+    <h2>Advertising & Promotion</h2>
+    <p>
+      We help businesses, organizations, and individuals promote their brand,
+      products, or ideas through well-planned advertising strategies across
+      multiple channels.
+    </p>
+
+    <article id="digital-ad" class="sub-service">
+      <h3>Digital Advertising</h3>
+      <p>
+        Planning and guidance for online promotions across platforms such as
+        social media and digital channels. We focus on identifying the right
+        audience, selecting suitable platforms, and defining a clear promotion
+        strategy aligned with your goals.
+      </p>
+      <a class="consult-btn"
+         href="{{ url_for('consultation') }}?service=digital">
+        Request Consultation
+      </a>
+    </article>
+
+    <article id="tv-ad" class="sub-service">
+      <h3>Television Advertising</h3>
+      <p>
+        Strategic support for television-based advertising, including concept
+        planning, audience targeting, and recommendations on timing and channel
+        selection to maximize visibility and reach.
+      </p>
+      <a class="consult-btn"
+         href="{{ url_for('consultation') }}?service=television">
+        Request Consultation
+      </a>
+    </article>
+
+    <article id="offline-ad" class="sub-service">
+      <h3>Offline Advertising</h3>
+      <p>
+        Guidance for offline promotional activities such as posters, banners,
+        cutouts, and local-area advertising. This is suitable for businesses
+        looking to improve physical visibility and local brand awareness.
+      </p>
+      <a class="consult-btn"
+         href="{{ url_for('consultation') }}?service=offline">
+        Request Consultation
+      </a>
+    </article>
+
+    <p class="combined-note">
+      This option covers digital, television, and offline advertising together
+      under a single consultation.
+    </p>
+
+    <a class="consult-btn combined-btn"
+       href="{{ url_for('consultation') }}?service=advertising">
+      Request Consultation (Advertising & Promotion)
+    </a>
+  </section>
+
+  <section class="category consultation">
+    <h2>Business Consultation & Analysis</h2>
+    <p>
+      We provide consultation and analytical guidance to help businesses
+      understand their current position, identify areas for improvement, and
+      plan effective marketing and growth strategies based on their objectives
+      and market conditions.
+    </p>
+    <a class="consult-btn"
+       href="{{ url_for('consultation') }}?service=consultation">
+      Request Consultation
+    </a>
+  </section>
+
+  <section class="category growth">
+    <h2>Business Ideas & Growth Support</h2>
+    <p>
+      Support for startups and individuals seeking guidance on business ideas,
+      product improvements, and growth planning. This service focuses on idea
+      validation, strategic direction, and long-term development support.
+    </p>
+    <a class="consult-btn"
+       href="{{ url_for('consultation') }}?service=growth">
+      Request Consultation
+    </a>
+  </section>
+</main>
+{% endblock %}

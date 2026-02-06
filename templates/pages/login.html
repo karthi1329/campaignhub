@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login - CampaignHub{% endblock %}
+
+{% block content %}
+<main id="login-page">
+  <h1>Admin Login</h1>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="flash-message">
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" action="{{ url_for('login') }}" class="form">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" required class="input">
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required class="input">
+
+    <button type="submit" class="submit-btn">Login</button>
+  </form>
+</main>
+{% endblock %}
