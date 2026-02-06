@@ -1,8 +1,6 @@
 import sqlite3
-import os
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 
-app.secret_key = os.environ.get("SECRET_KEY", "dev_secret")
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # required for flash messages and sessions
 
